@@ -18,11 +18,15 @@
     'version': '0.1',
     'author': 'Vizucom Oy',
     'website': 'http://www.vizucom.com',
-    'depends': ['sale'],
+    'depends': ['sale', 'web_context_tunnel'],
     'description': """
 Sale Order: Delivery Address First
 ==================================
- * Modifies the Sale Order form so that setting the delivery address suggests the partner
+ * Modifies the Sale Order form so that setting the delivery address first suggests the parent partner
+ * Depends on OCA's web_context_tunnel module (https://github.com/OCA/server-tools/tree/8.0/web_context_tunnel)
+
     """,
-    'data': [],
+    'data': [
+        'views/sale_order.xml',
+    ],
 }
